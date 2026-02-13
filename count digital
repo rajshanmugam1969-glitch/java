@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int litter =0,digits=0,special=0;
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(Character.isLetter(ch))
+                letter++;
+            else if(Character.isDigit(ch))
+                digits++;
+            else if(ch!=' ')
+                special++;
+        }
+        System.out.println(letter);
+        System.out.println(digits);
+        System.out.println(special);
+    }
+}
