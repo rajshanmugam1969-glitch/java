@@ -6,20 +6,20 @@ public class Solution {
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
               Scanner sc=new Scanner(System.in);
-        int a=sc.nextInt();
-        //int real=a;
-        int rev=0;
-        while(a>0){
-            int  rev1=a%10;
-              rev=rev*10+rev1;
-             a=a/10;
-          }
-          if(a==rev){
-               System.out.print("Palindrome");
-          }
-          else{
-              System.out.print("NOT palindrome");
-          }
-        
+        int n=sc.nextInt();
+        int original=n;
+        int reverse=0;
+        while(n>0){
+          int  digit=n%10;
+            reverse=reverse*10+digit;
+           n=n/10;
+        }
+        if(original==reverse){
+            System.out.print("Palindrome");
+        }
+        else{
+            System.out.print("Not Palindrome");
+        }
+
     }
 }
