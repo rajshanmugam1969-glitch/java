@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class AreaCalculator {
+
+    // Area of Square
+    int area(int side) {
+        return side * side;
+    }
+
+    // Area of Rectangle
+    int area(int length, int breadth) {
+        return length * breadth;
+    }
+
+    // Area of Circle
+    double area(double radius) {
+        return 3.14 * radius * radius;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        AreaCalculator calc = new AreaCalculator();
+
+        String shape = scan.next();
+
+        if (shape.equalsIgnoreCase("Square")) {
+            int side = scan.nextInt();
+            System.out.println(calc.area(side));
+
+        } else if (shape.equalsIgnoreCase("Rectangle")) {
+            int length = scan.nextInt();
+            int breadth = scan.nextInt();
+            System.out.println(calc.area(length, breadth));
+
+        } else if (shape.equalsIgnoreCase("Circle")) {
+            double radius = scan.nextDouble();
+            System.out.println(calc.area(radius));
+        }
+
+        scan.close();
+    }
+}
