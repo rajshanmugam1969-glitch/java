@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Printer {
+    void print(String message) {
+        System.out.println(message);
+    }    
+    void print(String message, int times) {
+        for (int i = 0; i < times; i++) {
+            System.out.println(message);
+        }
+    }
+}
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Printer printer = new Printer();
+        String message = scan.nextLine();
+
+        if (scan.hasNextInt()) {
+            int times = scan.nextInt();
+            printer.print(message, times);
+        } else {
+            printer.print(message);
+        }
+
+        scan.close();
+    }
+}
