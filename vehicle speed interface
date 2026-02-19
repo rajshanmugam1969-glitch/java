@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+interface Vehicle {
+    void speed();
+}
+
+class Car implements Vehicle {
+    public void speed() {
+        System.out.println("120km/h");
+    }
+}
+
+class Bike implements Vehicle {
+    public void speed() {
+        System.out.println("80km/h");
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String type = scan.nextLine();
+
+        Vehicle v;
+
+        if (type.equals("car")) {
+            v = new Car();
+            v.speed();
+        } 
+        else if (type.equals("bike")) {
+            v = new Bike();
+            v.speed();
+        }
+
+        scan.close();
+    }
+}
