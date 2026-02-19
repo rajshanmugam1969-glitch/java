@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+
+class Student {
+    void displayRoll(int rollNo) {
+        System.out.println("Roll no:" + rollNo);
+    }
+}
+
+class Exam extends Student {
+    void checkResult(int marks) {
+        if (marks >= 40) {
+            System.out.println("Result:Pass");
+        } else {
+            System.out.println("Result:Fail");
+        }
+    }
+}
+
+class Result extends Exam {
+    void displayResult(int rollNo, int marks) {
+        displayRoll(rollNo);
+        checkResult(marks);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int rollNo = sc.nextInt();
+        int marks = sc.nextInt();
+
+        Result res = new Result();
+        res.displayResult(rollNo, marks);
+
+        
+    }
+}
