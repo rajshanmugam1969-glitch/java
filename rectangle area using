@@ -1,32 +1,33 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 class Rectangle {
     int length;
     int breadth;
-    
+
     // Parameterized constructor
     Rectangle(int length, int breadth) {
         this.length = length;
         this.breadth = breadth;
     }
-    
+
     // Method to calculate and print area
-    void calulateArea() {
-        int area =length * breadth;
-        System.out.println("Area:"+ area);
+    void calculateArea() {
+        int area = length * breadth;
+        System.out.println("Area:" + area);
     }
 }
+
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         int length = sc.nextInt();
         int breadth = sc.nextInt();
-        
-        Rectangle rect = new Rectangle(length, breadth);
-        Rectangle  calculateArea;
-        
-        sc.close();
 
+        Rectangle rect = new Rectangle(length, breadth);
+        rect.calculateArea();
+
+        sc.close();
     }
 }
